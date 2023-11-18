@@ -10,15 +10,20 @@ body {
 }
 
 .bored {
-  max-width: 500px;
+  max-width: 520px;
+  padding: 0 10px;
   margin: 0 auto;
   margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 400px;
+  font-size: 40px;
 }
 
 .bored__title,
 .bored__do-text {
   text-align: center;
-  font-size: 40px;
 }
 
 .bored__title {
@@ -27,7 +32,7 @@ body {
 }
 
 .bored__do-text {
-  margin-bottom: 90px;
+  margin-bottom: 16px;
 }
 
 .bored__btn {
@@ -43,8 +48,66 @@ body {
   color: white;
   font-size: 32px;
   transition: background 0.2s;
+  margin-top: auto;
 }
 
 .bored__btn:hover {
   background: #0179ce;
+}
+
+.loader-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+  opacity: 0;
+  z-index: -1;
+}
+
+.loader-container.loader-container-active {
+  z-index: 1;
+  opacity: 0.4;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 400px) {
+  .bored {
+    font-size: 25px;
+    margin-top: 30px;
+    min-height: 220px;
+  }
+
+  .bored__title {
+    margin-bottom: 30px;
+  }
+
+  .bored__btn {
+    height: 45px;
+    font-size: 22px;
+  }
 }
