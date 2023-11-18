@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 47.62%);
+}
+
+.bored {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.bored__title,
+.bored__do-text {
+  text-align: center;
+  font-size: 40px;
+}
+
+.bored__title {
+  font-weight: 700;
+  margin-bottom: 66px;
+}
+
+.bored__do-text {
+  margin-bottom: 90px;
+}
+
+.bored__btn {
+  width: 100%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  background: #0094ff;
+  color: white;
+  font-size: 32px;
+  transition: background 0.2s;
+}
+
+.bored__btn:hover {
+  background: #0179ce;
+}
