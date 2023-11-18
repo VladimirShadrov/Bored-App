@@ -1,4 +1,4 @@
-const URL = 'http://www.boredapi.com/api/activity/';
+const URL = 'https://www.boredapi.com/api/activity/';
 const $title = document.querySelector('.js-title');
 const $activityText = document.querySelector('.js-activity-text');
 const $btn = document.querySelector('.js-action-btn');
